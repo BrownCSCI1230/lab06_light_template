@@ -1,6 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include "canvas2d.h"
+#include "Canvas2D.h"
 
 
 

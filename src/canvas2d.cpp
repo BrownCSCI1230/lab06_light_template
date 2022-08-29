@@ -15,7 +15,7 @@
 #include <Qfile>
 
 #include "rgba.h"
-#include "canvas2d.h"
+#include "Canvas2D.h"
 #include "lightmodel.h"
 
 

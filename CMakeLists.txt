@@ -24,8 +24,8 @@ set(PROJECT_SOURCES
         src/mainwindow.cpp
         src/mainwindow.h
         src/mainwindow.ui
-        src/canvas2d.cpp
-        src/canvas2d.h
+        src/Canvas2D.cpp
+        src/Canvas2D.h
         src/rgba.cpp
         src/rgba.h
         src/ReflSampler.cpp
@@ -39,7 +39,11 @@ qt_add_executable(lab06_light
     ${PROJECT_SOURCES}
 )
 
-target_link_libraries(lab06_light PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
+target_link_libraries(lab06_light PRIVATE
+    Qt6::Widgets
+    Qt6::Core
+)
+
 
 qt6_add_resources(lab06_light "ray_data"
     PREFIX
