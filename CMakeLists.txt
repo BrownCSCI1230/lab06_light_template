@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.16)
 
 # Sets project name
-project(lab06 VERSION 0.1 LANGUAGES CXX)
+project(lab06 LANGUAGES CXX C)
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 set(CMAKE_AUTOUIC ON)
@@ -13,14 +13,14 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # Specifies required Qt components
-find_package(Qt6 REQUIRED COMPONENTS Widgets REQUIRED)
-find_package(Qt6 COMPONENTS Core REQUIRED)
+find_package(Qt6 REQUIRED COMPONENTS Core)
+find_package(Qt6 REQUIRED COMPONENTS Widgets)
 
+# Allows you to include files from within those directories, without prefixing their filepaths
 include_directories(src)
-include_directories(glm)
 
 # Specifies .cpp and .h files to be passed to the compiler
-add_executable(lab06_light
+add_executable(${PROJECT_NAME}
   main.cpp
   
   src/mainwindow.cpp
@@ -40,13 +40,13 @@ add_executable(lab06_light
 )
 
 # Specifies libraries to be linked (Qt components, glew, etc)
-target_link_libraries(lab06_light PRIVATE
+target_link_libraries(${PROJECT_NAME} PRIVATE
   Qt6::Widgets
   Qt6::Core
 )
 
 # Specifies other files
-qt6_add_resources(lab06_light "Resources"
+qt6_add_resources(${PROJECT_NAME} "Resources"
   PREFIX
   "/"
   FILES
