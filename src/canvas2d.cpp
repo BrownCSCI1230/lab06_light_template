@@ -55,11 +55,11 @@ void Canvas2D::draw_load()
     lights.clear();
     lights.push_back(LightInfo{glm::vec4(0.99, 0.99, 0.99, 1), glm::vec3(2, 2, 2)});
     lights.push_back(LightInfo{glm::vec4(0.99, 0.99, 0.99, 1), glm::vec3(-4, 4, 4)});
-    Sampler refl_sampler(QString(":/images/background.png"));
+    Sampler refl_sampler(QString(":/resource/background.png"));
 
     // load intersection data
     std::string data_path = QCoreApplication::applicationDirPath().toStdString()+"intersections.dat";
-    QFile::copy(QString(":/intersections.dat"), data_path.c_str());
+    QFile::copy(QString(":/resource/intersections.dat"), data_path.c_str());
     std::ifstream inFile(data_path, std::ios::in | std::ios::binary);
     pixel_info info;
     RGBA tmp(0,0,0,0);
