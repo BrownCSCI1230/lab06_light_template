@@ -1,18 +1,15 @@
 #pragma once
 
 #include "glm/gtc/matrix_transform.hpp"
-
-#include <vector>
-#include <QWidget>
 #include "param.h"
 #include "ReflSampler.h"
+#include <vector>
+#include <QWidget>
 
 /*
  * Header file for canvas2d.cpp
  * You are NOT supposed to modify this file.
  */
-
-
 class Canvas2D : public QWidget
 {
     Q_OBJECT

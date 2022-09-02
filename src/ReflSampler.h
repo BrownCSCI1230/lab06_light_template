@@ -6,7 +6,6 @@
 #include "glm.hpp"
 #include "rgba.h"
 
-
 /*
  * Header file for ReflSampler.cpp
  * You are NOT supposed to modify this file.

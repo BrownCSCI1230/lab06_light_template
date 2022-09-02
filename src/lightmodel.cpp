@@ -8,15 +8,12 @@
  * If you have questions about the variables and structs, refer to
  * main.cpp for guidance.
  */
-
-
 RGBA colorClamp(float illumination[3])
 {
     RGBA out(0,0,0,255); // We will not think about opacity(the fourth number) in this lab
     // Task 1 - illumination to rgba:
     return out;
 }
-
 
 // Calculates RGBA of a pixel with given infomation
 // We use single letters to represent variables for conveniency. Here is the
@@ -45,11 +42,10 @@ RGBA phong(glm::vec3 p, glm::vec3 n, glm::vec3 s, Material m,
     }
 
     // Task 7: reflection:
-    /*
-     * Usage for reflection sampler:
-     *          Sampler::getReflection(glm::vec3 start_position, glm::vec3 light_direction) -> glm::vec4
-     *          Returns reflection intensity at a direction from start position
-     */
+    //
+    // Usage for reflection sampler:
+    //          Sampler::getReflection(glm::vec3 start_position, glm::vec3 light_direction) -> glm::vec4
+    //          Returns reflection intensity at a direction from start position
 
     float illu[3] = {illumination.r, illumination.g, illumination.b};
     RGBA out = colorClamp(illu);

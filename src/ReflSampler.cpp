@@ -1,15 +1,12 @@
 #include "ReflSampler.h"
 #include <math.h>
 
-
 /*
  * The functions used for reflection.
  * We use a skybox-style reflection sampler so you don't
  * have to worry about recursive intersections here.
  * You are NOT supposed to modify this file.
  */
-
-
 Sampler::Sampler(QString path)
 {
     background = QImage(path);

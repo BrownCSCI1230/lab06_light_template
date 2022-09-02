@@ -26,7 +26,6 @@ add_executable(${PROJECT_NAME}
   
   src/mainwindow.cpp
   src/canvas2d.cpp
-  src/rgba.cpp
   src/ReflSampler.cpp
   src/lightmodel.cpp
   
@@ -51,6 +50,6 @@ qt6_add_resources(${PROJECT_NAME} "Resources"
   PREFIX
   "/"
   FILES
-  resource/intersections.dat
-  resource/background.png
+  resources/intersections.dat
+  resources/background.png
 )

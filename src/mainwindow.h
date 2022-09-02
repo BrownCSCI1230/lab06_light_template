@@ -6,8 +6,6 @@
  * Header file for MainWindow.cpp
  * You are NOT supposed to modify this file.
  */
-
-
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE

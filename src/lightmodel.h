@@ -12,9 +12,7 @@
  * It defines the phong function you need to fill in.
  * You are NOT supposed to modify this file.
  */
-
 RGBA colorClamp(float illumination[3]);
-
 
 RGBA phong(
   glm::vec3 position,
