@@ -12,13 +12,13 @@
 
 RGBA colorClamp(float illumination[3])
 {
-    RGBA out(0,0,0,255); // we will not think about opacity(the fourth number) in this lab
+    RGBA out(0,0,0,255); // We will not think about opacity(the fourth number) in this lab
     // Task 1 - illumination to rgba:
     return out;
 }
 
 
-// calculates RGBA of a pixel with given infomation
+// Calculates RGBA of a pixel with given infomation
 // We use single letters to represent variables for conveniency. Here is the
 // detailed explaination:
 // p - position of the intersection point
@@ -32,21 +32,21 @@ RGBA phong(glm::vec3 p, glm::vec3 n, glm::vec3 s, Material m,
 {
     glm::vec4 illumination(1,1,1,1);
 
-    // Task 3 - ambient light:
-    // remember to replace the initial value of illumination or set it to zero
+    // Task 3: ambient light:
+    // Remember to replace the initial value of illumination or set it to zero
 
     for (LightInfo l: lights)
     {
-        // Task 6 - attenuation:
+        // Task 6: attenuation:
 
-        // Task 4 - diffuse light:
+        // Task 4: diffuse light:
 
-        // Task 5 - specular light:
+        // Task 5: specular light:
     }
 
-    // Task 7 - reflection:
+    // Task 7: reflection:
     /*
-     * usage for reflection sampler:
+     * Usage for reflection sampler:
      *          Sampler::getReflection(glm::vec3 start_position, glm::vec3 light_direction) -> glm::vec4
      *          Returns reflection intensity at a direction from start position
      */

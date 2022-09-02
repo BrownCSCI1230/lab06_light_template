@@ -1,5 +1,4 @@
-#ifndef LIGHTMODEL_H
-#define LIGHTMODEL_H
+#pragma once
 
 #include "glm.hpp"
 #include "rgba.h"
@@ -24,5 +23,3 @@ RGBA phong(
   Material material,
   std::vector<LightInfo> lights,
   Sampler reflectionSampler);
-
-#endif // LIGHTMODEL_H

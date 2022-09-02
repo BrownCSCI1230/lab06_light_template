@@ -1,5 +1,4 @@
-#ifndef Canvas2D_H
-#define Canvas2D_H
+#pragma once
 
 #include "glm/gtc/matrix_transform.hpp"
 
@@ -27,7 +26,7 @@ public:
 protected:
     QImage *m_image;
 
-    // a temporary function, will be replaced by loading data
+    // A temporary function, will be replaced by loading data
     pixel_info getPixelInfo(glm::vec3 src, glm::vec3 dir);
 
 private:
@@ -35,5 +34,3 @@ private:
     const int width = 768;
     const int height = 512;
 };
-
-#endif // Canvas2D_H

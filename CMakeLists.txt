@@ -22,7 +22,7 @@ include_directories(glm)
 
 # Specifies .cpp and .h files to be passed to the compiler
 add_executable(${PROJECT_NAME}
-  main.cpp
+  src/main.cpp
   
   src/mainwindow.cpp
   src/Canvas2D.cpp

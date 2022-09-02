@@ -1,5 +1,4 @@
-#ifndef RGBA_H
-#define RGBA_H
+#pragma once
 
 #include <QPainter>
 
@@ -47,5 +46,3 @@ struct RGBA {
     friend bool operator!=(const RGBA &c1, const RGBA &c2);
 
 };
-
-#endif // RGBA_H

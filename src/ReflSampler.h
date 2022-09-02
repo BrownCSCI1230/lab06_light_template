@@ -1,5 +1,4 @@
-#ifndef REFLSAMPLER_H
-#define REFLSAMPLER_H
+#pragma once
 
 #include <QImage>
 #include <QString>
@@ -27,5 +26,3 @@ private:
     float h_ratio;
     float w_ratio;
 };
-
-#endif // REFLSAMPLER_H

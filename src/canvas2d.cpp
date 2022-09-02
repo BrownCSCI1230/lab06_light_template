@@ -46,18 +46,18 @@ void Canvas2D::paintEvent(QPaintEvent *event)
     painter.drawImage(QPoint(0, 0), *m_image);
 }
 
-// render the image to show on canvas
+// Render the image to show on canvas
 void Canvas2D::draw_load()
 {
 
-    // define light sources
+    // Define light sources
     std::vector<LightInfo> lights;
     lights.clear();
     lights.push_back(LightInfo{glm::vec4(0.99, 0.99, 0.99, 1), glm::vec3(2, 2, 2)});
     lights.push_back(LightInfo{glm::vec4(0.99, 0.99, 0.99, 1), glm::vec3(-4, 4, 4)});
     Sampler refl_sampler(QString(":/resource/background.png"));
 
-    // load intersection data
+    // Load intersection data
     std::string data_path = QCoreApplication::applicationDirPath().toStdString()+"intersections.dat";
     QFile::copy(QString(":/resource/intersections.dat"), data_path.c_str());
     std::ifstream inFile(data_path, std::ios::in | std::ios::binary);
@@ -68,7 +68,7 @@ void Canvas2D::draw_load()
         {
             inFile.read((char *)&info, sizeof(info));
 
-            // get color with phong model
+            // Get color with phong model
             if(info.intersect)
                 tmp = phong(info.position, info.normal, info.sight, info.material, lights, refl_sampler);
             else

@@ -1,5 +1,4 @@
-#ifndef MAINWINDOW_H
-#define MAINWINDOW_H
+#pragma once
 
 #include <QMainWindow>
 
@@ -27,4 +26,3 @@ private:
     Ui::MainWindow *ui;
     Canvas2D *m_canvas;
 };
-#endif // MAINWINDOW_H

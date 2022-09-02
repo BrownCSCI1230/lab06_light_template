@@ -17,13 +17,13 @@ Sampler::Sampler(QString path)
     w_ratio = background.size().width()/10.1f;
 }
 
-// convert Qcolor to glm::vec4
+// Convert Qcolor to glm::vec4
 glm::vec4 Sampler::Qc2vec(QColor c)
 {
     return glm::vec4(c.red()/255.f, c.green()/255.f, c.blue()/255.f, c.alpha()/255.f);
 }
 
-// get interpolated color at given coordinates
+// Get interpolated color at given coordinates
 glm::vec4 Sampler::interpolate(float x, float y)
 {
     float xs = std::floor(x);
@@ -38,7 +38,7 @@ glm::vec4 Sampler::interpolate(float x, float y)
            (c01*(xs+1-x) + c11*(x-xs))*(y-ys);
 }
 
-// get reflection color of given light ray
+// Get reflection color of given light ray
 glm::vec4 Sampler::getReflection(glm::vec3 pos, glm::vec3 dir)
 {
     if(dir.z<0.1) return glm::vec4(0,0,0,0);
