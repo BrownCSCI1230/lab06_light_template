@@ -62,7 +62,7 @@ void Canvas2D::draw_load()
     QFile::copy(QString(":/resource/intersections.dat"), data_path.c_str());
     std::ifstream inFile(data_path, std::ios::in | std::ios::binary);
     pixel_info info;
-    RGBA tmp(0,0,0,0);
+    RGBA tmp{0,0,0,0};
     for(int i=0;i<width;i++)
         for(int j=0;j<height;j++)
         {
@@ -72,8 +72,8 @@ void Canvas2D::draw_load()
             if(info.intersect)
                 tmp = phong(info.position, info.normal, info.sight, info.material, lights, refl_sampler);
             else
-                tmp = RGBA(0,0,0,0);
-            m_image->setPixel(i,j,tmp.convertQt());
+                tmp = RGBA{0,0,0,0};
+            m_image->setPixel(i,j,qRgba(tmp.r, tmp.g, tmp.b, tmp.a));
         }
 }
 

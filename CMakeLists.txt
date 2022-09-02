@@ -26,7 +26,6 @@ add_executable(${PROJECT_NAME}
   
   src/mainwindow.cpp
   src/Canvas2D.cpp
-  src/rgba.cpp
   src/ReflSampler.cpp
   src/lightmodel.cpp
   
