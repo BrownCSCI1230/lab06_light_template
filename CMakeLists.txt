@@ -51,6 +51,6 @@ qt6_add_resources(${PROJECT_NAME} "Resources"
   PREFIX
   "/"
   FILES
-  resource/intersections.dat
-  resource/background.png
+  resources/intersections.dat
+  resources/background.png
 )

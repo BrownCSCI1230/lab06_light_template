@@ -2,14 +2,10 @@
 #include "ui_mainwindow.h"
 #include "Canvas2D.h"
 
-
-
 /*
  * Basic Qt GUI operations.
  * You are NOT supposed to modify this file.
  */
-
-
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
