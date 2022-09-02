@@ -25,13 +25,13 @@ add_executable(${PROJECT_NAME}
   src/main.cpp
   
   src/mainwindow.cpp
-  src/Canvas2D.cpp
+  src/canvas2d.cpp
   src/rgba.cpp
   src/ReflSampler.cpp
   src/lightmodel.cpp
   
   src/mainwindow.h
-  src/Canvas2D.h
+  src/canvas2d.h
   src/rgba.h
   src/ReflSampler.h
   src/lightmodel.h

@@ -12,10 +12,10 @@
 #include <iostream>
 #include <fstream>
 #include <QCoreApplication>
-#include <Qfile>
+#include <QFile>
 
 #include "rgba.h"
-#include "Canvas2D.h"
+#include "canvas2d.h"
 #include "lightmodel.h"
 
 
