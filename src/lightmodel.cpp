@@ -10,8 +10,8 @@
  */
 RGBA colorClamp(float illumination[3])
 {
-    RGBA out(0,0,0,255); // We will not think about opacity(the fourth number) in this lab
-    // Task 1 - illumination to rgba:
+    RGBA out{0,0,0,255}; // We will not think about opacity(the fourth number) in this lab
+    // Task 1:  illumination to rgba
     return out;
 }
 
