@@ -1,23 +1,13 @@
 #pragma once
 
-#include "glm.hpp"
-#include "rgba.h"
-#include "param.h"
-#include "ReflSampler.h"
-
+#include <glm/glm.hpp>
 #include <vector>
 
-/*
- * Header file for lightmodel.cpp
- * It defines the phong function you need to fill in.
- * You are NOT supposed to modify this file.
- */
-RGBA colorClamp(float illumination[3]);
+#include "param.h"
+#include "reflectionsampler.h"
+#include "rgba.h"
 
-RGBA phong(
-  glm::vec3 position,
-  glm::vec3 normal,
-  glm::vec3 directionToCamera,
-  Material material,
-  std::vector<LightInfo> lights,
-  Sampler reflectionSampler);
+// You are NOT supposed to modify this file.
+
+RGBA phong(glm::vec3 position, glm::vec3 normal, glm::vec3 directionToCamera,
+           const Material &material, const std::vector<LightInfo> &lights, const Sampler &reflectionSampler);

@@ -22,34 +22,43 @@ include_directories(glm)
 
 # Specifies .cpp and .h files to be passed to the compiler
 add_executable(${PROJECT_NAME}
-  src/main.cpp
-  
-  src/mainwindow.cpp
-  src/canvas2d.cpp
-  src/ReflSampler.cpp
-  src/lightmodel.cpp
-  
-  src/mainwindow.h
-  src/canvas2d.h
-  src/rgba.h
-  src/ReflSampler.h
-  src/lightmodel.h
-  src/param.h
+    src/main.cpp
 
-  src/mainwindow.ui
+    src/canvas2d.cpp
+    src/lightmodel.cpp
+    src/mainwindow.cpp
+    src/reflectionsampler.cpp
+
+    src/canvas2d.h
+    src/lightmodel.h
+    src/mainwindow.h
+    src/param.h
+    src/rgba.h
+    src/reflectionsampler.h
+
+    src/mainwindow.ui
 )
 
 # Specifies libraries to be linked (Qt components, glew, etc)
 target_link_libraries(${PROJECT_NAME} PRIVATE
-  Qt6::Widgets
-  Qt6::Core
+    Qt6::Widgets
+    Qt6::Core
 )
 
 # Specifies other files
 qt6_add_resources(${PROJECT_NAME} "Resources"
-  PREFIX
-  "/"
-  FILES
-  resources/intersections.dat
-  resources/background.png
+    PREFIX
+        "/"
+    FILES
+        resources/intersections.dat
+        resources/background.png
 )
+
+# Set this flag to silence warnings on Windows
+if (MSVC OR MSYS OR MINGW)
+  set(CMAKE_CXX_FLAGS "-Wno-volatile")
+endif()
+# Set this flag to silence warnings on MacOS
+if (APPLE)
+  set(CMAKE_CXX_FLAGS "-Wno-deprecated-volatile")
+endif()
