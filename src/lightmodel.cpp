@@ -1,43 +1,46 @@
 #include "lightmodel.h"
 #include <cmath>
+#include <iostream>
 
 // This file contains the phong function you need to fill in.
-// Check detailed explanation about input arguments at lightmodel.cpp
 // This should be the ONLY file you modify.
-// If you have questions about the variables and structs, refer to
-// main.cpp for guidance.
 
+// Helper function to convert illumination to RGBA, applying some form of tone-mapping (e.g. clamping) in the process
 RGBA toRGBA(const glm::vec4 &illumination) {
-    // we do not need to think about opacity in this lab
-    RGBA out{0, 0, 0};
-    // Task 1 - illumination to rgba:
+    // Task 1
 
-    return out;
+    return RGBA{0, 0, 0};
 }
 
-// calculates RGBA of a pixel with given infomation
-RGBA phong(glm::vec3 position, glm::vec3 normal, glm::vec3 directionToCamera,
-           const Material &material, const std::vector<LightInfo> &lights, const Sampler &reflectionSampler) {
+// Calculates the RGBA of a pixel from intersection infomation and globally-defined coefficients
+RGBA phong(glm::vec3  position,
+           glm::vec3  normal,
+           glm::vec3  directionToCamera,
+           Material  &material,
+           std::vector<LightInfo> &lights,
+           Sampler   &reflectionSampler) {
+    // Normalizing directions
+    normal            = glm::normalize(normal);
+    directionToCamera = glm::normalize(directionToCamera);
+
+    // Output illumination (we can ignore opacity)
     glm::vec4 illumination(0, 0, 0, 1);
 
-    // Task 3 - ambient light:
+    // Task 3: add the ambient term
 
-    for (const LightInfo &l : lights) {
-        // Task 4:
+    for (const LightInfo &light : lights) {
+        // Task 6: compute the attenuation factor
 
-        // Task 6:
+        // Task 4, task 6: add the diffuse term
 
-        // Task 4, Task 6:
-
-        // Task 5, Task 6:
+        // Task 5, task 6: add the specular term
     }
 
-    // Task 7:
-    // usage for reflection sampler:
-    // Sampler::getReflection(glm::vec3 start_position, glm::vec3 light_direction) -> glm::vec4
-    // Returns reflection intensity at a direction from start position
+    // Task 7: add reflection
 
+    // Use Sampler::getReflection(glm::vec3 startPosition, glm::vec3 lightDirection)
+    // to get the reflection intensity when "recursively raytracing" in some direction from some position
 
-    RGBA out = toRGBA(illumination);
-    return out;
+    RGBA returnValue = toRGBA(illumination);
+    return returnValue;
 }

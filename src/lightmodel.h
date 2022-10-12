@@ -9,5 +9,9 @@
 
 // You are NOT supposed to modify this file.
 
-RGBA phong(glm::vec3 position, glm::vec3 normal, glm::vec3 directionToCamera,
-           const Material &material, const std::vector<LightInfo> &lights, const Sampler &reflectionSampler);
+RGBA phong(glm::vec3  position,
+           glm::vec3  normal,
+           glm::vec3  directionToCamera,
+           Material  &material,
+           std::vector<LightInfo> &lights,
+           Sampler   &reflectionSampler);
