@@ -36,10 +36,12 @@ RGBA phong(glm::vec3  position,
         // Task 5, task 6: add the specular term
     }
 
-    // Task 7: add reflection
+    // Task 7: uncomment the following lines and correct the reflection term.
+    //      Uses Sampler::getReflection(glm::vec3 startPosition, glm::vec3 lightDirection)
+    //      to get the reflection intensity when "recursively raytracing" in some direction from some position
 
-    // Use Sampler::getReflection(glm::vec3 startPosition, glm::vec3 lightDirection)
-    // to get the reflection intensity when "recursively raytracing" in some direction from some position
+//    glm::vec3 reflectedRay = directionToCamera - 2.f*glm::dot(directionToCamera, normal)*normal; // <-- fix this calculation
+//    illumination += kr * reflectionSampler.getReflection(position, reflectedRay);                 // <-- do NOT touch this line
 
     RGBA returnValue = toRGBA(illumination);
     return returnValue;
