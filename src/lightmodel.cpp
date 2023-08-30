@@ -37,7 +37,7 @@ RGBA phong(glm::vec3  position,
     }
 
     // Task 7: uncomment the following lines and correct the reflection term.
-    //      Uses Sampler::getReflection(glm::vec3 startPosition, glm::vec3 lightDirection)
+    //      The following code uses Sampler::getReflection(glm::vec3 startPosition, glm::vec3 lightDirection)
     //      to get the reflection intensity when "recursively raytracing" in some direction from some position
 
 //    glm::vec3 reflectedRay = directionToCamera - 2.f*glm::dot(directionToCamera, normal)*normal; // <-- fix this calculation
