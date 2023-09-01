@@ -25,7 +25,7 @@ struct Material {
 
 struct LightInfo {
     glm::vec4 color;     // point light color
-    glm::vec3 source;    // point light source position
+    glm::vec3 pos;    // point light source position
 };
 
 struct PixelInfo {
